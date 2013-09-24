@@ -70,6 +70,17 @@ public class Sliding extends Activity {
 		return false;
 	}
 	
+	public void options(View button){
+		switch(button.getId()){
+		case R.id.button_easy:
+			//
+			break;
+		case R.id.button_normal:
+			//
+			break;
+		}
+	}
+	
 	public void selecPic(View view){
 		Intent intent = new Intent();
 		intent.setType("image/*");

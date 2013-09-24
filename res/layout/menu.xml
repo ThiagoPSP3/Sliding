@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/play"
-        android:layout_weight="3" />
+        android:layout_weight="3"
+        android:onClick="startGame" />
 
     <Button
         android:id="@+id/button_options"

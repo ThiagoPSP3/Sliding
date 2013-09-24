@@ -30,10 +30,9 @@ public class Sliding extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sliding);
+		super.onCreate(savedInstanceState);		
+		setContentView(R.layout.menu);
 		util = new Util(this);
-		grid = new Grid(this);
 		view[0] = R.id.image00;
 		view[1] = R.id.image01;
 		view[2] = R.id.image02;
@@ -54,8 +53,8 @@ public class Sliding extends Activity {
 			}
 	}
 	
-	public void shuffle(View view){
-		grid.shuffle();
+	public void startGame(View view){
+		gallery(view);
 	}
 	
 	public boolean findNeighbors(int a,int b){
@@ -72,7 +71,7 @@ public class Sliding extends Activity {
 		}
 		return false;
 	}
-	
+	/*
 	public void options(View button){
 		TextView t = (TextView) findViewById(R.id.text_dif);
 		switch(button.getId()){
@@ -97,7 +96,7 @@ public class Sliding extends Activity {
 			grid.print(); 
 			break;
 		}
-	}
+	}*/
 	
 	public void selecPic(View view){
 		Intent intent = new Intent();
@@ -117,6 +116,7 @@ public class Sliding extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,int pos, long id) {
             	setContentView(R.layout.activity_sliding);
+            	
             	grid.load(fileList.get(pos));
             }
         });

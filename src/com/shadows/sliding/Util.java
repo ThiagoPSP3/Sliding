@@ -26,10 +26,25 @@ public class Util{
 		setTempUri();
 	}
 	
-	public float getFactor(){return Math.abs(h-w);}
-	public int getSize(){return size;}
-	public Uri gettempUri(int i){if(i==1)setTempUri();return tempUri;}
-	public ArrayList<Uri> getFileList(){ListDir(dir);return fileList;}
+	public float getFactor(){
+		return Math.abs(h-w);
+	}
+	
+	public int getSize(){
+		return size;
+	}
+	
+	public Uri gettempUri(int i)
+	{
+		if(i==1)
+			setTempUri();
+		return tempUri;
+	}
+	
+	public ArrayList<Uri> getFileList(){
+		ListDir(dir);
+		return fileList;
+	}
 	
 	@SuppressWarnings("deprecation")
 	public void setSize(Context ctx){
@@ -42,8 +57,10 @@ public class Util{
 		}
 		else{
 			w = display.getWidth(); h = display.getHeight();
-			if (w<h)size = w;
-			else size = h;
+			if (w<h)
+				size = w;
+			else 
+				size = h;
 		}
 	}
 	
@@ -53,19 +70,24 @@ public class Util{
 		h=0;
 		Point screen = new Point();
 		display.getSize(screen);w=screen.x;h=screen.y;
-		if (w<h)size = w;
-		else size = h;
+		if 
+			(w<h)size = w;
+		else 
+			size = h;
 	}
 	
 	public void setTempUri(){
 		String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Sliding";
 		dir = new File(file_path);
+		
 		if(!dir.exists())
 			dir.mkdirs();
+			
 		do{
 			filecount+=1;
 			tempFile = new File(dir, "slidingtmp" +filecount+ ".jpg");
 		}while(tempFile.exists());
+		
 		filecount = 0;
 		tempUri = Uri.fromFile(tempFile);
 	}
@@ -78,7 +100,7 @@ public class Util{
 	     File[] files = f.listFiles();
 	     fileList.clear();
 	     for (File file : files){
-	      fileList.add(Uri.fromFile(file));  
+	     	fileList.add(Uri.fromFile(file));  
 	     }
 	 }
 	

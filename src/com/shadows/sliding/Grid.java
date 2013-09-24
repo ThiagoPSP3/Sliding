@@ -125,23 +125,17 @@ public class Grid {
 		Random r = new Random();
 		int rand = r.nextInt(5-1) + 1;
 			if (rand == 1) change(a,blank);
-			else if (rand == 2)	change(b,blank);
-			else if (rand == 3) change(c,blank);
-			else if (rand == 4) change(d,blank);
+			else if (rand == 2) change(b,blank);
+			else if (rand == 3 && c > -1) change(c,blank);
+			else if (rand == 4 && d > -1) change(d,blank);
 	}
+	
 	public void shuffleAux(int a, int b, int c){
-		Random r = new Random();
-		int rand = r.nextInt(4-1) + 1;
-		if (rand == 1) change(a,blank);
-		else if (rand == 2)	change(b,blank);
-		else if (rand == 3) change(c,blank);
+		shuffleAuex(a,b,-1,-1)
 	}
+	
 	public void shuffleAux(int a, int b){
-
-		Random r = new Random();
-		int rand = r.nextInt(3-1) + 1;
-		if (rand == 1) change(a,blank);
-		else if (rand == 2)	change(b,blank);
+		shuffleAux(a,b,-1)
 	}
 	
 	public void change(int numa,int numb){

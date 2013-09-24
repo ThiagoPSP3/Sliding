@@ -108,6 +108,7 @@ public class Grid {
 	}
 	
 	public void shuffle(){
+		//shuffle 1000 times, then stops when the blank is in the position number 9
 		for(int i=0;i<1000||blank!=9;i++){
 			if 		(blank == 1) shuffleAux(2,4,0,0,2);				
 			else if (blank == 2) shuffleAux(1,3,5,0,3);

@@ -109,33 +109,25 @@ public class Grid {
 	
 	public void shuffle(){
 		for(int i=0;i<1000||blank!=9;i++){
-			if (blank == 1)	shuffleAux(2,4);				
-			else if (blank == 2) shuffleAux(1,3,5);
-			else if (blank == 3) shuffleAux(2,6);
-			else if (blank == 4) shuffleAux(1,5,7);			
-			else if (blank == 5) shuffleAux(2,4,6,8);
-			else if (blank == 6) shuffleAux(3,5,9);
-			else if (blank == 7) shuffleAux(4,8);			
-			else if (blank == 8) shuffleAux(5,7,9);
-			else if (blank == 9) shuffleAux(6,8);
+			if 		(blank == 1) shuffleAux(2,4,0,0,2);				
+			else if (blank == 2) shuffleAux(1,3,5,0,3);
+			else if (blank == 3) shuffleAux(2,6,0,0,2);
+			else if (blank == 4) shuffleAux(1,5,7,0,3);			
+			else if (blank == 5) shuffleAux(2,4,6,8,4);
+			else if (blank == 6) shuffleAux(3,5,9,0,3);
+			else if (blank == 7) shuffleAux(4,8,0,0,2);			
+			else if (blank == 8) shuffleAux(5,7,9,0,3);
+			else if (blank == 9) shuffleAux(6,8,0,0,2);
 		}
 	}
 	
-	public void shuffleAux(int a, int b, int c,int d, int num = 4){
+	public void shuffleAux(int a, int b, int c,int d,int num){
 		Random r = new Random();
 		int rand = r.nextInt(num) + 1;
-			if (rand == 1) change(a,blank);
-			else if (rand == 2) change(b,blank);
-			else if (rand == 3 && c > -1) change(c,blank);
-			else if (rand == 4 && d > -1) change(d,blank);
-	}
-	
-	public void shuffleAux(int a, int b, int c, int num = 3){
-		shuffleAux(a,b,-1,-1, num)
-	}
-	
-	public void shuffleAux(int a, int b, int num =2){
-		shuffleAux(a,b,-1, num)
+		if 		(rand == 1) change(a,blank);
+		else if (rand == 2) change(b,blank);
+		else if (rand == 3) change(c,blank);
+		else if (rand == 4) change(d,blank);
 	}
 	
 	public void change(int numa,int numb){

@@ -29,19 +29,16 @@ public class ImageAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return uri.size();
 	}
 
 	@Override
 	public Object getItem(int pos) {
-		// TODO Auto-generated method stub
 		return uri.get(pos);
 	}
 
 	@Override
 	public long getItemId(int pos) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -54,13 +51,15 @@ public class ImageAdapter extends BaseAdapter {
 			aux = Bitmap.createScaledBitmap(aux, util.getSize()/4, util.getSize()/4, false);		
 			int size = util.getSize()/2 - 40;
 			imageView = new ImageView(mContext);
-	        imageView.setImageBitmap(aux);
-	        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-	        imageView.setLayoutParams(new GridView.LayoutParams(size,size));
-	        imageView.setPadding(20, 20, 20, 20);
-		} catch (FileNotFoundException e) {
+		        imageView.setImageBitmap(aux);
+		        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+		        imageView.setLayoutParams(new GridView.LayoutParams(size,size));
+		        imageView.setPadding(20, 20, 20, 20);
+		} 
+		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
 		}
         return imageView;

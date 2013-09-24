@@ -121,21 +121,21 @@ public class Grid {
 		}
 	}
 	
-	public void shuffleAux(int a, int b, int c,int d){
+	public void shuffleAux(int a, int b, int c,int d, int num = 4){
 		Random r = new Random();
-		int rand = r.nextInt(5-1) + 1;
+		int rand = r.nextInt(num) + 1;
 			if (rand == 1) change(a,blank);
 			else if (rand == 2) change(b,blank);
 			else if (rand == 3 && c > -1) change(c,blank);
 			else if (rand == 4 && d > -1) change(d,blank);
 	}
 	
-	public void shuffleAux(int a, int b, int c){
-		shuffleAuex(a,b,-1,-1)
+	public void shuffleAux(int a, int b, int c, int num = 3){
+		shuffleAux(a,b,-1,-1, num)
 	}
 	
-	public void shuffleAux(int a, int b){
-		shuffleAux(a,b,-1)
+	public void shuffleAux(int a, int b, int num =2){
+		shuffleAux(a,b,-1, num)
 	}
 	
 	public void change(int numa,int numb){

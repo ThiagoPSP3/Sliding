@@ -47,7 +47,7 @@ public class Sliding extends Activity {
 	public void click(View press){
 		for(int i=1;i<10;i++)
 			if (press.getId()==view[i]){
-				if(ngbrs(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
+				if(findNeighbors(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
 			}
 	}
 	
@@ -55,7 +55,7 @@ public class Sliding extends Activity {
 		grid.shuffle();
 	}
 	
-	public boolean ngbrs(int a,int b){
+	public boolean findNeighbors(int a,int b){
 		switch(a){
 			case 1:switch(b){case 2:return true;case 4:return true;}break;
 			case 2:switch(b){case 1:return true;case 3:return true;case 5:return true;}break;

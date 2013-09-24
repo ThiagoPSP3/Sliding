@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Sliding extends Activity {
@@ -20,6 +21,7 @@ public class Sliding extends Activity {
 	ImageView img;
 	Util util;
 	Grid grid;
+	boolean easy = false;
 	Bitmap aux;
 	ArrayList<Uri> fileList = new ArrayList<Uri>();
 	Integer[] view = new Integer[10]; 
@@ -47,7 +49,8 @@ public class Sliding extends Activity {
 	public void click(View press){
 		for(int i=1;i<10;i++)
 			if (press.getId()==view[i]){
-				if(findNeighbors(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
+				if(easy){grid.change(i,grid.getBlank());break;}
+				else if(findNeighbors(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
 			}
 	}
 	
@@ -71,12 +74,27 @@ public class Sliding extends Activity {
 	}
 	
 	public void options(View button){
+		TextView t = (TextView) findViewById(R.id.text_dif);
 		switch(button.getId()){
 		case R.id.button_easy:
-			//
+			t.setText(R.string.easy);
+			easy = true;
 			break;
 		case R.id.button_normal:
-			//
+			t.setText(R.string.normal);
+			easy=false;
+			break;
+		case R.id.button_options:
+			setContentView(R.layout.options);
+			TextView tx = (TextView) findViewById(R.id.text_dif);
+			if (easy)
+				tx.setText(R.string.easy);
+			else
+				tx.setText(R.string.normal);
+			break;
+		case R.id.button_options_ok:
+			setContentView(R.layout.activity_sliding);
+			grid.print(); 
 			break;
 		}
 	}

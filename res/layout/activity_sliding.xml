@@ -174,13 +174,13 @@
              android:text="@string/gallery" />
          
          <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_options"
             android:layout_width="0dp"
             android:layout_weight="0.5"
             android:layout_height="fill_parent"
 	        android:layout_margin="1dp"
-             android:onClick="shuffle"
-            android:text="@string/shuffle" />
+             android:onClick="options"
+            android:text="@string/options" />
 	         
 	                 
 

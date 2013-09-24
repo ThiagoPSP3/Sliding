@@ -67,5 +67,11 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button_options_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+            android:onClick="options" />
 
 </LinearLayout>

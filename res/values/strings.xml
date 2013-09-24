@@ -19,5 +19,6 @@
     <string name="difficult">Difficult:  </string>
     <string name="easy">Easy</string>
     <string name="normal">Normal</string>
+    <string name="ok">OK</string>
 
 </resources>

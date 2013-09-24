@@ -16,7 +16,7 @@
     <string name="deleted">Picture Removed from Sliding Folder</string>
     <string name="play">Play</string>
     <string name="options">Options</string>
-    <string name="difficult">Difficult</string>
+    <string name="difficult">Difficult:  </string>
     <string name="easy">Easy</string>
     <string name="normal">Normal</string>
 

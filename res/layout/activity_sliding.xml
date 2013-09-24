@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/linLayout0" >
+    
+    <LinearLayout
+        android:id="@+id/linLayout1"
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+	        android:layout_margin="0dp">
+	         
+         <Button
+             android:id="@+id/button1"
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+	        android:layout_margin="1dp"
+             android:layout_weight="0.6"
+             android:onClick="selecPic"
+             android:text="@string/importButton" />
+         
+         <ImageView
+	        android:id="@+id/image00"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_margin="1dp"
+            android:layout_weight="0.4"
+	        android:contentDescription="@string/imgdesc"
+	        android:src="@drawable/nysm" />
+	         
+	                 
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+	    <ImageView
+	        android:id="@+id/image01"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm1" />
+	    
+	    <ImageView
+	        android:id="@+id/image02"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm2" />
+	
+	    <ImageView
+	        android:id="@+id/image03"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm3" />
+    
+    
+	    </LinearLayout>
+  
+	<LinearLayout
+        android:id="@+id/linLayout3"
+	    android:layout_width="match_parent"
+        android:layout_height="0dp" >
+	    
+	     <ImageView
+	        android:id="@+id/image04"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm4" />
+	
+	    <ImageView
+	        android:id="@+id/image05"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm5" />
+	
+	    <ImageView
+	        android:id="@+id/image06"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm6" />
+	    
+	    </LinearLayout>
+	    
+    <LinearLayout
+        android:id="@+id/linLayout4"
+        android:layout_width="match_parent"
+      	android:layout_height="0dp" >
+
+	    <ImageView
+	        android:id="@+id/image07"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm7" />
+	
+	    <ImageView
+	        android:id="@+id/image08"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm8" />
+    
+	    <ImageView
+	        android:id="@+id/image09"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="1dp"
+	        android:clickable="true"
+	        android:onClick="click"
+	        android:contentDescription="@string/imgdesc"
+	        android:layout_weight="1"
+	        android:src="@drawable/nysm9" />
+   	
+   
+   </LinearLayout>
+    
+   <LinearLayout
+        android:id="@+id/linLayout5"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+	        android:layout_margin="0dp" >
+	         
+	         
+         <Button
+             android:id="@+id/button3"
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+	        android:layout_margin="1dp"
+             android:layout_weight="0.5"
+             android:onClick="gallery"
+             android:text="@string/gallery" />
+         
+         <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="fill_parent"
+	        android:layout_margin="1dp"
+             android:onClick="shuffle"
+            android:text="@string/shuffle" />
+	         
+	                 
+
+    </LinearLayout>
+	    
+</LinearLayout>

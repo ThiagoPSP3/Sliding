@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sliding</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <color name="white">#FFFFFF</color>
+    <string name="importButton">Import</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="loadpic">Load Image</string>
+    <string name="imgdesc">Grid</string>
+    <string name="gallery">Gallery</string>
+    <string name="deleted">Picture Removed from Sliding Folder</string>
+
+</resources>

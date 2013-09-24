@@ -52,26 +52,32 @@ public class Grid {
 		LinearLayout l = (LinearLayout)ctx.findViewById(R.id.linLayout0);
 		l.setWeightSum(util.getFactor()+util.getSize());
 		l = (LinearLayout)ctx.findViewById(R.id.linLayout1);
+		
 		LinearLayout.LayoutParams lPar = (LinearLayout.LayoutParams) l.getLayoutParams();
 		lPar.weight = util.getFactor()/2;
 		l.setLayoutParams(lPar);
+		
 		l = (LinearLayout)ctx.findViewById(R.id.linLayout5);
 		lPar = (LinearLayout.LayoutParams) l.getLayoutParams();
 		lPar.weight = util.getFactor()/2;
 		l.setLayoutParams(lPar);
+		
 		l = (LinearLayout)ctx.findViewById(R.id.linLayout2);
 		lPar = (LinearLayout.LayoutParams) l.getLayoutParams();
 		lPar.weight = util.getSize()/3;
 		l.setLayoutParams(lPar);
+		
 		l = (LinearLayout)ctx.findViewById(R.id.linLayout3);
 		lPar = (LinearLayout.LayoutParams) l.getLayoutParams();
 		lPar.weight = util.getSize()/3;
 		l.setLayoutParams(lPar);
+		
 		l = (LinearLayout)ctx.findViewById(R.id.linLayout4);
 		lPar = (LinearLayout.LayoutParams) l.getLayoutParams();
 		lPar.weight = util.getSize()/3;
 		l.setLayoutParams(lPar);		
 	}
+	
 	public void print(){
 		for(int i=0;i<10;i++){ 
 			img = (ImageView) ctx.findViewById(view[i]);
@@ -101,17 +107,6 @@ public class Grid {
 		print();
 	}
 	
-	public void change(int numa,int numb){
-		ImageView img = (ImageView) ctx.findViewById(view[numa]);
-		img.setImageBitmap(bit[numb]);
-		img = (ImageView) ctx.findViewById(view[numb]);		
-		img.setImageBitmap(bit[numa]);
-		aux = bit[numa];
-		bit[numa]=bit[numb];
-		bit[numb] = aux;
-		blank = numa;
-	}
-
 	public void shuffle(){
 		for(int i=0;i<1000||blank!=9;i++){
 			if (blank == 1)	shuffleAux(2,4);				
@@ -147,5 +142,16 @@ public class Grid {
 		int rand = r.nextInt(3-1) + 1;
 		if (rand == 1) change(a,blank);
 		else if (rand == 2)	change(b,blank);
-	}	
+	}
+	
+	public void change(int numa,int numb){
+		ImageView img = (ImageView) ctx.findViewById(view[numa]);
+		img.setImageBitmap(bit[numb]);
+		img = (ImageView) ctx.findViewById(view[numb]);		
+		img.setImageBitmap(bit[numa]);
+		aux = bit[numa];
+		bit[numa]=bit[numb];
+		bit[numb] = aux;
+		blank = numa;
+	}
 }

@@ -49,7 +49,7 @@ public class Sliding extends Activity {
 		for(int i=1;i<10;i++)
 			if (press.getId()==view[i]){
 				if(easy){grid.change(i,grid.getBlank());break;}
-				else if(findNeighbors(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
+				else if(areNeighbors(i,grid.getBlank())){grid.change(i,grid.getBlank());break;}
 			}
 	}
 	
@@ -57,7 +57,7 @@ public class Sliding extends Activity {
 		gallery(view);
 	}
 	
-	public boolean findNeighbors(int a,int b){
+	public boolean areNeighbors(int a,int b){
 		switch(a){
 			case 1:switch(b){case 2:return true;case 4:return true;}break;
 			case 2:switch(b){case 1:return true;case 3:return true;case 5:return true;}break;
